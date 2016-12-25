@@ -15,9 +15,11 @@
 #' @importFrom readr read_csv
 #'
 #' @examples
+#' \dontrun{
 #' fars_read("accident_2013.csv.bz2")
 #' fars_read("accident_2014.csv.bz2")
 #' fars_read("accident_2015.csv.bz2")
+#' }
 #'
 #' @export
 fars_read <- function(filename) {
@@ -44,9 +46,11 @@ fars_read <- function(filename) {
 #' @return A character string of the FARS data filename for that year
 #'
 #' @examples
+#' \dontrun{
 #' make_filename(2013)
 #' make_filename(2014)
 #' make_filename(2015)
+#' }
 #'
 #' @export
 make_filename <- function(year) {
@@ -73,9 +77,11 @@ make_filename <- function(year) {
 #' @importFrom magrittr %>%
 #'
 #' @examples
+#' \dontrun{
 #' fars_read_years(2013)
 #' fars_read_years(c(2014, 2015))
 #' fars_read_years(2013:2015)
+#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -111,9 +117,11 @@ fars_read_years <- function(years) {
 #' @importFrom magrittr %>%
 #'
 #' @examples
+#' \dontrun{
 #' fars_summarize_years(2013)
 #' fars_sumarize_years(c(2014, 2015))
 #' fars_summarize_years(2013:2015)
+#' }
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -145,9 +153,11 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
+#' \dontrun{
 #' fars_map_state(1, 2013)
 #' fars_map_state(25, 2014)
 #' fars_map_state(51, 2015)
+#' }
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
