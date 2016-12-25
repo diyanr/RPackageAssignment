@@ -11,7 +11,8 @@
 #'
 #' @return This function returns the data in the file
 #'
-#' @importFrom dplyr, readr
+#' @importFrom dplyr tbl_df
+#' @importFrom readr read_csv
 #'
 #' @examples
 #' fars_read("accident_2013.csv.bz2")
@@ -68,7 +69,7 @@ make_filename <- function(year) {
 #' @return A list of data tables for each year.
 #'      Returns an error message "invalid year YYYY" when an error is encountered.
 #'
-#' @importFrom dplyr
+#' @importFrom dplyr mutate select
 #'
 #' @examples
 #' fars_read_years(2013)
@@ -104,7 +105,8 @@ fars_read_years <- function(years) {
 #'
 #' @return A table of the total fatalities per month in each year
 #'
-#' @importFrom dplyr, tidyr
+#' @importFrom dplyr bind_rows group_by summarize
+#' @importFrom tidyr spread
 #'
 #' @examples
 #' fars_summarize_years(2013)
@@ -136,7 +138,9 @@ fars_summarize_years <- function(years) {
 #'
 #' @return A geographic map of the state with points representing fatalities during that year
 #'
-#' @importFrom dplyr, maps, graphics
+#' @importFrom dplyr filter
+#' @importFrom maps map
+#' @importFrom graphics points
 #'
 #' @examples
 #' fars_map_state(1, 2013)
