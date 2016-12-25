@@ -70,6 +70,7 @@ make_filename <- function(year) {
 #'      Returns an error message "invalid year YYYY" when an error is encountered.
 #'
 #' @importFrom dplyr mutate select
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' fars_read_years(2013)
@@ -107,6 +108,7 @@ fars_read_years <- function(years) {
 #'
 #' @importFrom dplyr bind_rows group_by summarize
 #' @importFrom tidyr spread
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' fars_summarize_years(2013)
