@@ -23,9 +23,11 @@ This function takes a list of years and returns a table of the total number
 of fatalities per month for each year
 }
 \examples{
+\dontrun{
 fars_summarize_years(2013)
 fars_sumarize_years(c(2014, 2015))
 fars_summarize_years(2013:2015)
+}
 
 }
 

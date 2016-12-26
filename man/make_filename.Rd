@@ -23,9 +23,11 @@ This function takes year character string and makes a file name that contains
 the FARS data for that particular year
 }
 \examples{
+\dontrun{
 make_filename(2013)
 make_filename(2014)
 make_filename(2015)
+}
 
 }
 

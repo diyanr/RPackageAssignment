@@ -22,9 +22,11 @@ This function returns the data in the file
 This function reads a data file containing FARS data
 }
 \examples{
+\dontrun{
 fars_read("accident_2013.csv.bz2")
 fars_read("accident_2014.csv.bz2")
 fars_read("accident_2015.csv.bz2")
+}
 
 }
 

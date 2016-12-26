@@ -24,9 +24,11 @@ This function takes a list of years in YYYY format and reads the FARS data
 for each year
 }
 \examples{
+\dontrun{
 fars_read_years(2013)
 fars_read_years(c(2014, 2015))
 fars_read_years(2013:2015)
+}
 
 }
 

@@ -4,7 +4,7 @@ author: "Diyan Rahaman"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Fatality Analysis Reporting System}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,9 +13,15 @@ The functions provided in this package will be using data from the US National H
 
 ## Vignette Info
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+This vignette contains information about the following functions available in this package:
 
-## Styles
+- make_filename
+- fars_read
+- fars_read_years
+- fars_summarize_years
+- fars_map_state
+
+## Function make_filename
 
 The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
 
