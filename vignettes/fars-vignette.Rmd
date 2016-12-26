@@ -7,9 +7,16 @@ vignette: >
   %\VignetteIndexEntry{Fatality Analysis Reporting System}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-  %\VignetteDepends{RPackageAssignment}
 ---
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(readr)
+library(tidyr)
+library(maps)
+library(graphics)
+library(magrittr)
+```
 The functions provided for you in this package will be using data from the US National Highway Traffic Safety Administration's [Fatality Analysis Reporting System](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
 
 ## Vignette Info
@@ -32,9 +39,9 @@ Returns: A character string of the FARS data filename for that year
 
 Examples:
 ```{r}
-make_filename(2013)
-make_filename(2014)
-make_filename(2015)
+RPackageAssignment::make_filename(2013)
+RPackageAssignment::make_filename(2014)
+RPackageAssignment::make_filename(2015)
 ```
 
 ## fars_read
@@ -47,7 +54,7 @@ Return: a dataframe with the data in the file
 
 Examples:
 ```{r}
-data2013 <- fars_read("accident_2013.csv.bz2")
+data2013 <- RPackageAssignment::fars_read("accident_2013.csv.bz2")
 ## Number of records in 2013
 nrow(data2013)
 ```
@@ -65,7 +72,7 @@ Returns:
 
 Examples:
 ```{r}
-data_2013_2015 <- fars_read_years(2013:2015)
+data_2013_2015 <- RPackageAssignment::fars_read_years(2013:2015)
 ## Number of data files between 2013 and 2015
 length(data_2013_2015)
 ## number of records in data for 2013
@@ -82,7 +89,7 @@ Returns: A table of the total fatalities per month in each year
 
 Examples:
 ```{r}
-fars_summarize_years(2013:2015)
+RPackageAssignment::fars_summarize_years(2013:2015)
 ```
 
 ## fars_map_state
@@ -99,7 +106,7 @@ Returns: A geographic map of the state with points representing fatalities durin
 Examples:
 ```{r}
 ## Display data for Maryland in 2014
-fars_map_state(24, 2014)
+RPackageAssignment::fars_map_state(24, 2014)
 ## Display data for Virginia in 2015
-fars_map_state(51, 2015)
+RPackageAssignment::fars_map_state(51, 2015)
 ```
