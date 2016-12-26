@@ -1,4 +1,5 @@
 # RPackageAssignment
+[![Build Status](https://travis-ci.org/diyanr/RPackageAssignment.svg?branch=master)](https://travis-ci.org/diyanr/RPackageAssignment)
 
 The functions provided for you in this package will be using data from the US National Highway Traffic Safety Administration's [Fatality Analysis Reporting System](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
 
