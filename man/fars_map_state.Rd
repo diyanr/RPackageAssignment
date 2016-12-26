@@ -27,8 +27,7 @@ for that year
 }
 \examples{
 \dontrun{
-fars_map_state(1, 2013)
-fars_map_state(25, 2014)
+fars_map_state(24, 2014)
 fars_map_state(51, 2015)
 }
 
